@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+
+{% block extrastyle %}
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static "bokeh_mobile_tests/css/bokeh/bokeh.css" %}" />
+{% endblock %}
+
+{% block extrahead %}
+{{ block.super }}
+<script src="{% static "bokeh_mobile_tests/js/bokeh/bokeh.js" %}" type="text/javascript"></script>
+{% endblock %}
+
+{% block breadcrumbs %}
+{% endblock %}
+
+{% block content %}
+    <div>{{script_bokeh|safe}}</div>
+    <div>{{div_bokeh|safe}}</div>
+{% endblock %}
